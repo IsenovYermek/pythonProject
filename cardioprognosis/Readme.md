@@ -14,7 +14,7 @@ and cholesterol level.)
 
    
 bash
-   git clone https://github.com/your-username/your-repo.git
+   git clone https://github.com/IsenovYermek/pythonProject/tree/main/cardioprognosis
    cd your-repo
    
 
