@@ -1,0 +1,44 @@
+{% extends 'task_manager/base.html' %}
+
+{% block content %}
+    <h1>Task List</h1>
+    <ul>
+        {% for task in tasks %}
+            <li>{{ task.title }}</li>
+        {% empty %}
+            <li>No tasks found.</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Data from heartdata.csv:</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Age</th>
+                <th>Sex</th>
+                <th>Chest Pain</th>
+                <th>Cholesterol</th>
+                <!-- Добавьте другие заголовки для остальных столбцов -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for index, row in data.iterrows %}
+                <tr>
+                    <td>{{ row.age }}</td>
+                    <td>{{ row.sex }}</td>
+                    <td>{{ row.cp }}</td>
+                    <td>{{ row.chol }}</td>
+                    <!-- Добавьте другие ячейки для остальных столбцов -->
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    {% if accuracy %}
+        <h2>Heart Failure Prediction Results:</h2>
+        <p>Accuracy: {{ accuracy }}</p>
+
+        <!-- Добавьте другие результаты и метрики по вашему усмотрению -->
+    {% endif %}
+
+{% endblock %}
