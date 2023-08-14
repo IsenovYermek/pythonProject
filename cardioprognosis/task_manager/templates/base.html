@@ -1,20 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task Manager</title>
-    <!-- Add your CSS and JS files here if necessary -->
+    <title>My Project</title>
+    <!-- Подключение CSS и других стилей -->
+    <style>
+        /* Общие стили */
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Task Manager</h1>
-    </header>
-    <main>
+    <!-- Навигационное меню -->
+    <nav>
+        <ul>
+            <li><a href="/">Главная</a></li>
+            <li><a href="/tasks/">Задачи</a></li>
+            <!-- Добавьте другие пункты меню, если необходимо -->
+        </ul>
+    </nav>
+
+    <!-- Контент страницы -->
+    <div class="content">
         {% block content %}{% endblock %}
-    </main>
+    </div>
+
+    <!-- Подвал -->
     <footer>
-        <!-- Add your footer content here if necessary -->
+        <!-- Содержимое подвала -->
     </footer>
+
+    <!-- Подключение JavaScript и других скриптов -->
+    <script>
+        // Код JavaScript
+    </script>
 </body>
 </html>
